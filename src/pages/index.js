@@ -1,17 +1,16 @@
-import styles from './index.css';
+import React, { useEffect, useRef } from 'react';
+import App from '@/core';
 
 export default function() {
+  const ref = useRef();
+  useEffect(() => {
+    const app = new App();
+    ref.current.appendChild(app.app.view);
+  }, []);
+
   return (
-    <div className={styles.normal}>
-      <div className={styles.welcome} />
-      <ul className={styles.list}>
-        <li>To get started, edit <code>src/pages/index.js</code> and save to reload.</li>
-        <li>
-          <a href="https://umijs.org/guide/getting-started.html">
-            Getting Started
-          </a>
-        </li>
-      </ul>
+    <div ref={ref}>
+      hello world
     </div>
   );
 }
