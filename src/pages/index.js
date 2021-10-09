@@ -3,6 +3,7 @@ import { Application, Loader } from 'pixi.js';
 
 import TiledMap from '@/core/TiledMap';
 import Player from '@/core/Player';
+import JoyStick from '@/components/JoyStick';
 
 export default function() {
   const ref = useRef();
@@ -51,14 +52,15 @@ export default function() {
         app.ticker.add(delta => play(delta));
       });
 
-      return () => {
-        player.destroy();
-      }
+    return () => {
+      player.destroy();
+    }
   }, []);
 
   return (
-    <div ref={ref}>
-
+    <div>
+      <div ref={ref} />
+      <JoyStick />
     </div>
   );
 }
