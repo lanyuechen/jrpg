@@ -15,7 +15,6 @@ export default class TiledMap extends PIXI.Container {
     tmx.parse(xmlString, resource.url, (error, map) => {
       if (error) throw error;
 
-      console.log('resource.data', map);
       resource.data = map;
       next();
     });
