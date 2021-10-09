@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Application, Loader } from 'pixi.js';
 
-import TiledMap from '@/core/TiledLoader/TiledMap';
+import TiledMap from '@/core/TiledMap';
 import Player from '@/core/Player';
 
 export default function() {
