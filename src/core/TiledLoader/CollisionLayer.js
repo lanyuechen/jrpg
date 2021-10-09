@@ -18,7 +18,11 @@ export default class CollisionLayer {
   }
 
   constructCollisionsMap () {
-    this.collisionsMap = this.tilesMap.map(d => d === undefined);
+    this.collisionsMap = new Array(this.tilesMap.length);
+    for (let i = 0; i < this.tilesMap.length; i++) {
+      const tile = this.tilesMap[i];
+      this.collisionsMap[i] = (tile === undefined);
+    }
   }
 
   getCollidables () {
