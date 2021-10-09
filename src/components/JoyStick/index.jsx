@@ -10,14 +10,14 @@ export default () => {
       mode: 'static',
       color: '#aaa',
       position: {
-        left: '50%',
-        top: '50%'
+        left: '10%',
+        bottom: '10%'
       },
     });
     
   }, []);
 
   return (
-    <div ref={ref} style={{width: '100%', height: 300, position: 'relative'}} />
+    <div ref={ref} style={{left: 0, top: 0, width: '100vw', height: '100vh', position: 'fixed'}} />
   );
 }
