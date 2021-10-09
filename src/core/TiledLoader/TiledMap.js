@@ -15,6 +15,7 @@ export default class TiledMap extends PIXI.Container {
     tmx.parse(xmlString, resource.url, (error, map) => {
       if (error) throw error;
 
+      console.log('resource.data', map);
       resource.data = map;
       next();
     });
@@ -24,8 +25,6 @@ export default class TiledMap extends PIXI.Container {
     super();
 
     const resource = PIXI.Loader.shared.resources[resourceId];
-    
-    this.layers = [];
 
     this.setDataProperties(resource.data);
     this.setDataTileSets(resource.data);
