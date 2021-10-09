@@ -1,5 +1,5 @@
 export default function(keyCode) {
-  let key = {};
+  const key = {};
   key.code = keyCode;
   key.isDown = false;
   key.isUp = true;

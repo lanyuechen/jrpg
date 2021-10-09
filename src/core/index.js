@@ -157,7 +157,6 @@ export default class App {
 
     // Left arrow key `press` method
     left.press = function() {
-
       // Change the explorer's velocity when the key is pressed
       explorer.vx = -5;
       explorer.vy = 0;
