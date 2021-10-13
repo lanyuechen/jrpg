@@ -2,22 +2,33 @@ import React, { useEffect, useRef } from 'react';
 
 import nipple from 'nipplejs';
 
-export default () => {
+export default (props) => {
+  const { style, onMove } = props;
   const ref = useRef();
   useEffect(() => {
     const manager = nipple.create({
       zone: ref.current,
-      mode: 'static',
+      mode: 'dynamic',
       color: '#aaa',
       position: {
-        left: '10%',
-        bottom: '10%'
+        left: '50%',
+        bottom: '50%'
       },
+    });
+
+    manager.on('move', (evt, data) => {
+      if (data.vector) {
+        onMove(data.vector.x, -data.vector.y);
+      }
+    });
+
+    manager.on('end', (evt, data) => {
+      onMove(0, 0);
     });
     
   }, []);
 
   return (
-    <div ref={ref} style={{left: 0, top: 0, width: '100vw', height: '100vh', position: 'fixed'}} />
+    <div ref={ref} style={style} />
   );
 }
