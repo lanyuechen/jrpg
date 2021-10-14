@@ -92,7 +92,7 @@ export default function() {
           worldHeight={1280}
           // plugins={['drag', 'pinch', 'wheel', 'decelerate']}
         >
-          <Tilemap />
+          <Tilemap src="/jrpg/maps/test.tmx" />
           <Player
             ref={playerRef}
             texture={textures["explorer.png"]}
