@@ -27,7 +27,7 @@ export default (props) => {
       onMove();
     });
     
-  }, []);
+  }, [onMove]);
 
   return (
     <div ref={ref} style={style} />

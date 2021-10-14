@@ -13,13 +13,6 @@ export default function() {
   const [textures, setTextures] = useState([]);
 
   const handleKeyDown = useCallback((e) => {
-    const viewport = viewportRef.current;
-    const player = playerRef.current;
-
-    // 玩家移动
-    const x = player.x + player.vx;
-    const y = player.y + player.vy;
-    
     if (e.code === 'ArrowUp') {
       playerRef.current.move(0, -5);
     } else if (e.code === 'ArrowLeft') {
@@ -53,7 +46,7 @@ export default function() {
       window.removeEventListener('keyup', handleKeyUp, false);
     }
 
-  }, []);
+  }, [handleKeyDown, handleKeyUp]);
 
   useEffect(() => {
     if (viewportRef.current && playerRef.current) {
