@@ -18,12 +18,13 @@ export default (props) => {
 
     manager.on('move', (evt, data) => {
       if (data.vector) {
-        onMove(data.vector.x, -data.vector.y);
+        onMove(data.direction?.angle);
+        // onMove(data.vector.x, -data.vector.y);
       }
     });
 
     manager.on('end', (evt, data) => {
-      onMove(0, 0);
+      onMove();
     });
     
   }, []);

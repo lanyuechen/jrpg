@@ -61,8 +61,18 @@ export default function() {
     }
   }, [textures]);
 
-  const handleMove = (x, y) => {
-    console.log(x, y);
+  const handleMove = (direction) => {
+    if (direction === 'up') {
+      playerRef.current.move(0, -5);
+    } else if (direction === 'left') {
+      playerRef.current.move(-5, 0);
+    } else if (direction === 'right') {
+      playerRef.current.move(5, 0);
+    } else if (direction === 'down') {
+      playerRef.current.move(0, 5);
+    } else {
+      playerRef.current.move(0, 0);
+    }
   }
 
   return (
