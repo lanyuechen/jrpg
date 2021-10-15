@@ -2,10 +2,26 @@ import { forwardRef } from 'react';
 import { Sprite } from 'pixi.js';
 import { PixiComponent, useTick } from '@inlet/react-pixi';
 
+import Iori from './Iori';
+
 const PlayerComponent = PixiComponent('Player', {
   create(props) {
-    const { texture, worldWidth, worldHeight } = props;
-    const player = new Sprite(texture);
+    const { textures, worldWidth, worldHeight } = props;
+    // const player = new Sprite(textures[0]);
+    
+    const iori = new Iori(textures);
+    const player = iori.sprite;
+
+    player.states = {
+      down: 0,
+      left: 4,
+      right: 8,
+      up: 12,
+      walkDown: [0, 3],
+      walkLeft: [4, 7],
+      walkRight: [8, 11],
+      walkUp: [12, 15]
+    };
 
     player.x = 0;
     player.y = 0;

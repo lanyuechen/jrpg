@@ -12,30 +12,52 @@ export default function() {
   const playerRef = useRef();
   const [textures, setTextures] = useState([]);
 
-  const handleKeyDown = useCallback((e) => {
-    if (e.code === 'ArrowUp') {
-      playerRef.current.move(0, -5);
-    } else if (e.code === 'ArrowLeft') {
-      playerRef.current.move(-5, 0);
-    } else if (e.code === 'ArrowRight') {
-      playerRef.current.move(5, 0);
-    } else if (e.code === 'ArrowDown') {
-      playerRef.current.move(0, 5);
+  const handleMove = (direction) => {
+    const player = playerRef.current;
+    if (direction === 'up') {
+      player.playAnimation(player.states.walkUp);
+      player.move(0, -5);
+    } else if (direction === 'left') {
+      player.playAnimation(player.states.walkLeft);
+      player.move(-5, 0);
+    } else if (direction === 'right') {
+      player.playAnimation(player.states.walkRight);
+      player.move(5, 0);
+    } else if (direction === 'down') {
+      player.playAnimation(player.states.walkDown);
+      player.move(0, 5);
+    } else {
+      player.move(0, 0);
     }
+  }
+
+  const handleKeyDown = useCallback((e) => {
+    const direction = e.code.toLowerCase().replace('arrow', '');
+
+    handleMove(direction);
   }, []);
 
-  const handleKeyUp = useCallback(() => {
-    playerRef.current.move(0, 0);
+  const handleKeyUp = useCallback((e) => {
+    const player = playerRef.current;
+    const direction = e.code.toLowerCase().replace('arrow', '');
+
+    player.show(player.states[direction]);
+    player.move(0, 0);
   }, []);
 
   useEffect(() => {
     const app = ref.current.app;
     app.loader
       .add([
-        'images/treasureHunter.json',
+        'images/Iori.json',
       ])
       .load(() => {
-        setTextures(app.loader.resources["images/treasureHunter.json"].textures)
+        const _textures = app.loader.resources["images/Iori.json"].textures;
+        const rs = [];
+        for (let i = 0; i < 16; i++) {
+          rs.push(_textures[`Iori.png${i}`]);
+        }
+        setTextures(rs);
       });
 
     window.addEventListener('keydown', handleKeyDown, false);
@@ -53,20 +75,6 @@ export default function() {
       viewportRef.current.follow(playerRef.current);
     }
   }, [textures]);
-
-  const handleMove = (direction) => {
-    if (direction === 'up') {
-      playerRef.current.move(0, -5);
-    } else if (direction === 'left') {
-      playerRef.current.move(-5, 0);
-    } else if (direction === 'right') {
-      playerRef.current.move(5, 0);
-    } else if (direction === 'down') {
-      playerRef.current.move(0, 5);
-    } else {
-      playerRef.current.move(0, 0);
-    }
-  }
 
   return (
     <>
@@ -86,12 +94,14 @@ export default function() {
           // plugins={['drag', 'pinch', 'wheel', 'decelerate']}
         >
           <Tilemap src="/jrpg/maps/test.tmx" />
-          <Player
-            ref={playerRef}
-            texture={textures["explorer.png"]}
-            worldWidth={640}
-            worldHeight={1280}
-          />
+          {textures.length > 0 && (
+            <Player
+              ref={playerRef}
+              textures={textures}
+              worldWidth={640}
+              worldHeight={1280}
+            />
+          )}
         </Viewport>
       </Stage>
       <JoyStick
