@@ -1,0 +1,141 @@
+{
+  "frames": {
+		"Iori.png0": {
+      "frame": { "x": 0, "y": 0, "w": 32, "h": 48 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 48 },
+      "sourceSize": { "w": 32, "h": 48 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+    "Iori.png1": {
+      "frame": { "x": 32, "y": 0, "w": 32, "h": 48 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 48 },
+      "sourceSize": { "w": 32, "h": 48 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+		"Iori.png2": {
+      "frame": { "x": 64, "y": 0, "w": 32, "h": 48 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 48 },
+      "sourceSize": { "w": 32, "h": 48 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+		"Iori.png3": {
+      "frame": { "x": 96, "y": 0, "w": 32, "h": 48 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 48 },
+      "sourceSize": { "w": 32, "h": 48 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+		"Iori.png4": {
+      "frame": { "x": 0, "y": 48, "w": 32, "h": 48 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 48 },
+      "sourceSize": { "w": 32, "h": 48 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+		"Iori.png5": {
+      "frame": { "x": 32, "y": 48, "w": 32, "h": 48 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 48 },
+      "sourceSize": { "w": 32, "h": 48 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+		"Iori.png6": {
+      "frame": { "x": 64, "y": 48, "w": 32, "h": 48 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 48 },
+      "sourceSize": { "w": 32, "h": 48 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+		"Iori.png7": {
+      "frame": { "x": 96, "y": 48, "w": 32, "h": 48 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 48 },
+      "sourceSize": { "w": 32, "h": 48 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+		"Iori.png8": {
+      "frame": { "x": 0, "y": 96, "w": 32, "h": 48 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 48 },
+      "sourceSize": { "w": 32, "h": 48 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+		"Iori.png9": {
+      "frame": { "x": 32, "y": 96, "w": 32, "h": 48 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 48 },
+      "sourceSize": { "w": 32, "h": 48 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+		"Iori.png10": {
+      "frame": { "x": 64, "y": 96, "w": 32, "h": 48 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 48 },
+      "sourceSize": { "w": 32, "h": 48 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+		"Iori.png11": {
+      "frame": { "x": 96, "y": 96, "w": 32, "h": 48 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 48 },
+      "sourceSize": { "w": 32, "h": 48 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+		"Iori.png12": {
+      "frame": { "x": 0, "y": 144, "w": 32, "h": 48 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 48 },
+      "sourceSize": { "w": 32, "h": 48 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+		"Iori.png13": {
+      "frame": { "x": 32, "y": 144, "w": 32, "h": 48 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 48 },
+      "sourceSize": { "w": 32, "h": 48 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+		"Iori.png14": {
+      "frame": { "x": 64, "y": 144, "w": 32, "h": 48 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 48 },
+      "sourceSize": { "w": 32, "h": 48 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    },
+		"Iori.png15": {
+      "frame": { "x": 96, "y": 144, "w": 32, "h": 48 },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": { "x": 0, "y": 0, "w": 32, "h": 48 },
+      "sourceSize": { "w": 32, "h": 48 },
+      "pivot": { "x": 0.5, "y": 0.5 }
+    }
+  },
+  "meta": {
+    "app": "http://www.codeandweb.com/texturepacker",
+    "version": "1.0",
+    "image": "Iori.png",
+    "format": "RGBA8888",
+    "size": { "w": 128, "h": 192 },
+    "scale": "1",
+    "smartupdate": "$TexturePacker:SmartUpdate:51ede84c7a85e4d6aeb31a6020a20858:3923663e59fb40b578d66a492a2cda2d:9995f8b4db1ac3cb75651b1542df8ee2$"
+  }
+}
