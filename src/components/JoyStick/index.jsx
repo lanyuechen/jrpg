@@ -8,7 +8,7 @@ export default (props) => {
   useEffect(() => {
     const manager = nipple.create({
       zone: ref.current,
-      mode: 'dynamic',
+      mode: 'static',
       color: '#aaa',
       position: {
         left: '50%',

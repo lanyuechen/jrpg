@@ -27,6 +27,7 @@ export default function() {
       player.playAnimation(player.states.walkDown);
       player.move(0, 5);
     } else {
+      player.show(player.states['down']);
       player.move(0, 0);
     }
   }
@@ -110,8 +111,8 @@ export default function() {
           position: 'fixed',
           left: 0,
           bottom: 0,
-          width:'100vw',
-          height: '30vh',
+          width: '200px',
+          height: '200px',
         }} />
     </>
   );

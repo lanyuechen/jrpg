@@ -1,5 +1,5 @@
 import { forwardRef } from 'react';
-import { Sprite } from 'pixi.js';
+// import { Sprite } from 'pixi.js';
 import { PixiComponent, useTick } from '@inlet/react-pixi';
 
 import Iori from './Iori';
